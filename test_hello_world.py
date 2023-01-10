@@ -14,7 +14,7 @@ class TestHelloWorld(unittest.TestCase):
     def test_message(self):
         response = self.app.get("/")
         message = hello_world.wrap_html("Hello CircleCI!")
-        self.assertEqual(response.data, message)
+        self.assertEqual(response.text, message)
 
 
 if __name__ == "__main__":
