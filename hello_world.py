@@ -2,6 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 def wrap_html(message):
     html = """
         <html>
@@ -14,14 +15,18 @@ def wrap_html(message):
             </center>
             </div>
         </body>
-        </html>""".format(message)
+        </html>""".format(
+        message
+    )
     return html
 
-@app.route('/')
+
+@app.route("/")
 def hello_world():
-    message = 'Hello PyLadies Chicago!'
+    message = "Hello CircleCI!"
     html = wrap_html(message)
     return html
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

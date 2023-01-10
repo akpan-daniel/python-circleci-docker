@@ -1,2 +1,2 @@
-flask
-pyinstaller
+flask==2.2.2
+pyinstaller==5.7.0
